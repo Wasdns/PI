@@ -104,11 +104,13 @@ git clone https://github.com/p4lang/PI.git
 cd PI
 git submodule update --init --recursive
 ./autogen.sh
-./configure --with-proto --without-internal-rpc --with-bmv2 --with-fe-cpp --with-sysrepo
+./configure --with-proto --with-bmv2 --with-fe-cpp --with-sysrepo [--without-internal-rpc] [--without-cli]
 make
 make check
 [sudo] make install
 ```
+
+Hint: I don't add the option arguments include `[--without-internal-rpc]` and `[--without-cli]` when applying `make`.
 
 ## Reference
 
