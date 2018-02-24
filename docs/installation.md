@@ -2,6 +2,8 @@
 
 Installation Guide of PI(18.02). System: Ubuntu 14.04, 64 bits.
 
+If you get some troubles when installing PI, maybe this file [install_errors.md](install_errors.md) can help.
+
 ## Install Dependencies
 
 1.Install dependencies from source:
