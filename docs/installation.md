@@ -51,7 +51,10 @@ make
 
 ```
 # 1.Install dependencies
-build-essential cmake libpcre3-dev libavl-dev libev-dev libprotobuf-c-dev protobuf-c-compiler
+# Hint: if you are installing pi under Debain system, use "build-essential" instead of "apt-get install"
+sudo apt-get update
+sudo apt-get install libprotobuf-c0-dev protobuf-c-compiler
+sudo apt-get install cmake libpcre3-dev libavl-dev libev-dev
 
 # 2.Install libyang
 git clone https://github.com/CESNET/libyang.git
