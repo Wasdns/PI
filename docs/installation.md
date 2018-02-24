@@ -50,14 +50,33 @@ make
 6.sysrepo:
 
 ```
-# 1.Install dependencies
-# Hint: if you are installing pi under Debain system, using the following command
+# Hint: if you are installing pi under Debain system, using the following command:
 # build-essential cmake libpcre3-dev libavl-dev libev-dev libprotobuf-c-dev protobuf-c-compiler
-sudo apt-get update
-sudo apt-get install libprotobuf-c0-dev protobuf-c-compiler
-sudo apt-get install cmake libpcre3-dev libavl-dev libev-dev
+# and then skip the 1,2,3 steps.
 
-# 2.Install libyang
+# 1.Install CMocka
+git clone git://git.cryptomilk.org/projects/cmocka.git
+cd cmocka
+mkdir build; cd build
+cmake -DCMAKE_BUILD_TYPE=Debug ..
+make
+make install
+
+# 2.Install Protobuf-c
+git clone https://github.com/protobuf-c/protobuf-c.git
+cd protobuf-c
+./autogen.sh && ./configure --prefix=/usr
+make
+make install
+
+# 3.Install libredblack
+git clone https://github.com/sysrepo/libredblack.git
+cd libredblack
+./configure
+make
+make install
+
+# 4.Install libyang
 git clone https://github.com/CESNET/libyang.git
 cd libyang
 git checkout v0.14-r1
@@ -67,7 +86,7 @@ cmake ..
 make
 [sudo] make install
 
-# 3.Install sysrepo:
+# 5.Install sysrepo:
 git clone https://github.com/sysrepo/sysrepo.git
 cd sysrepo
 git checkout v0.7.2
