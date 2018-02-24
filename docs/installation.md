@@ -51,7 +51,8 @@ make
 
 ```
 # 1.Install dependencies
-# Hint: if you are installing pi under Debain system, use "build-essential" instead of "apt-get install"
+# Hint: if you are installing pi under Debain system, using the following command
+# build-essential cmake libpcre3-dev libavl-dev libev-dev libprotobuf-c-dev protobuf-c-compiler
 sudo apt-get update
 sudo apt-get install libprotobuf-c0-dev protobuf-c-compiler
 sudo apt-get install cmake libpcre3-dev libavl-dev libev-dev
@@ -79,7 +80,16 @@ make
 
 ## Install PI
 
-
+```
+git clone https://github.com/p4lang/PI.git
+cd PI
+git submodule update --init --recursive
+./autogen.sh
+./configure --with-proto --without-internal-rpc --with-bmv2 --with-fe-cpp --with-sysrepo
+make
+make check
+[sudo] make install
+```
 
 ## Reference
 
