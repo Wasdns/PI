@@ -1,15 +1,9 @@
-# pi: A practice repository for learning PI/P4Runtime
+# pi
 
-Learning PI/P4Runtime, which is a control plane framework for P4-capable switch
+A practice repository for learning PI/P4Runtime, which is a control plane framework for P4-capable switch.
 
-## Installation
+This repository maintains these materials:
+- Installation: [docs/installation.md](docs/installation.md)
+- Hands-on Examples: [examples](examples/)
 
-See: [docs/installation.md](docs/installation.md)
-
-## Hands-on Examples
-
-TBD
-
-## LICENSE
-
-MIT.
+License: MIT
