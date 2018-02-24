@@ -1,6 +1,6 @@
 # Install PI
 
-Installation Guide of PI(18.02).
+Installation Guide of PI(18.02). System: Ubuntu 14.04, 64 bits.
 
 ## Install Dependencies
 
